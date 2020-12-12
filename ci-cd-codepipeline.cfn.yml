@@ -154,8 +154,8 @@ Resources:
               response["Reason"] = e
               response['Data'] = {"Message": "Resource creation failed"}
 
-            response_body = str(json.dumps(response))
-            headers = {'content-type': '', "content-length": len(response_body) }
+            response_body = json.dumps(response)
+            headers = {'content-type': '', "content-length": str(len(response_body)) } 
             put_response = requests.put(event['ResponseURL'], headers=headers, data=response_body)
             return response
 
