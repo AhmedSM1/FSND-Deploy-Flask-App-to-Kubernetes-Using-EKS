@@ -30,7 +30,7 @@ spec:
         app: simple-api
     spec:
       containers:
-        - name: simple-api
+        - name: simple-jwt-api
           image: CONTAINER_IMAGE
           securityContext:
             privileged: false
